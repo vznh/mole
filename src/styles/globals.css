@@ -55,58 +55,37 @@
 
 
 
-/* Gradient overlay */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 10vh;
-  background: linear-gradient(to bottom, rgba(248, 251, 248, 0.1) 0%, rgba(248, 251, 248, 0) 100%);
-  z-index: 10;
-  pointer-events: none;
-}
+/* Gradient overlay - desktop only */
+@media (min-width: 768px) {
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15vh;
+    background: linear-gradient(to bottom, rgba(248, 251, 248, 0.8) 0%, rgba(248, 251, 248, 0.4) 30%, rgba(248, 251, 248, 0.1) 70%, rgba(248, 251, 248, 0) 100%);
+    z-index: 10;
+    pointer-events: none;
+  }
 
-body::after {
-  content: '';
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100vw;
-  height: 10vh;
-  background: linear-gradient(to top, rgba(248, 251, 248, 0.1) 0%, rgba(248, 251, 248, 0) 100%);
-  z-index: 10;
-  pointer-events: none;
-}
-
-@font-face {
-  font-family: 'Holla';
-  src: url('/fonts/Holla.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Tiempos';
-  src: url('/fonts/Tiempos.otf') format('opentype');
-  font-style: normal;
-  font-display: swap;
+  body::after {
+    content: '';
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15vh;
+    background: linear-gradient(to top, rgba(248, 251, 248, 0.8) 0%, rgba(248, 251, 248, 0.4) 30%, rgba(248, 251, 248, 0.1) 70%, rgba(248, 251, 248, 0) 100%);
+    z-index: 10;
+    pointer-events: none;
+  }
 }
 
 @font-face {
   font-family: 'Geist';
   src: url('/fonts/Geist.otf') format('opentype');
   font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Khmer';
-  src: url('/fonts/Plex.ttf') format('truetype');
-  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
@@ -120,24 +99,16 @@ body::after {
 }
 
 @font-face {
-  font-family: 'Newsreader';
-  src: url('/fonts/Newsreader.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Covik';
-  src: url('/fonts/Covik.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
   font-family: 'Lora';
   src: url('/fonts/Lora.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plex';
+  src: url('/fonts/Plex.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
